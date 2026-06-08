@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英単語アプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Vocabulary Master</h1>
+
+  <div id="modeSelect">
+    <button class="baseBtn" onclick="app.setMode('EN_TO_JP', event)">英→日</button>
+    <button class="baseBtn" onclick="app.setMode('JP_TO_EN', event)">日→英</button>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div id="csvSelect">
+
+    <button class="baseBtn" onclick="app.loadCSV('words.csv', event)">ターゲット1200</button>
+    <button class="baseBtn" onclick="app.loadCSV('words1900.csv', event)">ターゲット1900</button>
+
+  </div>
+
+  <div class="spacer"></div>
+
+  <p id="questionCount"></p>
+
+  <div id="inputArea">
+
+    <div class="inputRow">
+      <input id="startNo" type="number">
+      〜
+      <input id="endNo" type="number">
+    </div>
+
+    <div class="spacer"></div>
+
+    <button class="baseBtn" onclick="app.selectRange()">START</button>
+
+  </div>
+
+  <h2 id="word"></h2>
+
+  <div id="choices"></div>
+
+  <div id="summary"></div>
+
+  <button id="retryBtn" class="baseBtn" onclick="app.startRetry()" style="display:none;">
+    再挑戦
+  </button>
+
+  <button id="homeBtn" class="baseBtn" onclick="app.goHome()" style="display:none;">
+    トップへ戻る
+  </button>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

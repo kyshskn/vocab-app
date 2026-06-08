@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f2f2f7;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#word {
+  text-align: center;
+  font-size: 28px;
+}
+
+#choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#choices button {
+  width: 320px;      /* ←完全固定（ここが重要） */
+  max-width: 90vw;   /* ←スマホ保険 */
+
+  height: 56px;
+
+  padding: 0 12px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  border-radius: 12px;
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  box-sizing: border-box;
+}
+
+#blockSelect {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#homeBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 200px;
+  max-width: 80%;
+
+  background: #111;
+  color: white;
+
+  border-radius: 12px;
+}
+
+#summary {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+}
+
+#summary h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.correct {
+  background: #34c759 !important;
+  color: white;
+}
+
+.wrong {
+  background: #ff3b30 !important;
+  color: white;
+}
+
+#startNo, #endNo {
+  width: 80px;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+input {
+  font-size: 18px;
+}
+
+#csvSelect button.active {
+  background: #007aff;
+  color: white;
+  font-weight: bold;
+}
+
+#modeSelect button.active {
+  background: #007aff !important;
+  color: white !important;
+}
+
+#csvSelect {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ★ここがスペース本体 */
+.spacer {
+  height: 16px;
+}
+
+#inputArea input {
+  font-size: 16px;
+  width: 80px;
+  text-align: center;
+}
+
+#inputArea button {
+  font-size: 16px;
+  font-weight: 700;
+
+  padding: 10px 24px;
+
+  display: block;
+  margin: 0 auto;   /* ←念のため中央固定 */
+
+  border-radius: 10px;
+}
+
+#inputArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* ←これで中央 */
+  gap: 12px;
+}
+
+.mainSelectBtn {
+  font-size: 24px;
+  font-weight: 700;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  min-width: 160px;
+
+  cursor: pointer;
+}
+
+#csvSelect,
+#modeSelect {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.baseBtn {
+  font-size: 22px;
+  font-weight: 700;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  cursor: pointer;
+}
